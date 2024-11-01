@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Home</title>
+  <link rel="stylesheet" href="ht.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">Logo.</div>
+    <nav class="nav">
+      <ul>
+        <li><a href="ht.html"><i class="fa-solid fa-house"></i></a></li>
+        <li><a href="about.html"><i class="fa-solid fa-info-circle"></i></a></li>
+        <li><a href="menu.html"> <i class="fa-solid fa-bowl-food"></i></i></a></li>
+        <li><a href="cart.html"><i class="fas fa-concierge-bell"></i></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Our Restaurant</h1>
+      <p>Delicious food, delightful ambiance, and memorable experiences.</p>
+      <a href="menu.html" class="btn">Explore Our Menu</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>Our restaurant is known for its unique flavors and dedication to quality. We use fresh ingredients and traditional recipes to bring you an authentic dining experience.</p>
+  </section>
+
+  <!-- Menu Highlights Section -->
+  <section id="menu" class="menu">
+    <h2>Menu Highlights</h2>
+    <div class="menu-cards">
+      <div class="menu-card">
+        <img src="images\Baked feta pasta.jpg" alt="Dish 1">
+        <h3>Dish Name 1</h3>
+        <p>A short description of the dish.</p>
+      </div>
+      <div class="menu-card">
+        <img src="images/sushi.jpg" alt="Dish 2">
+        <h3>Dish Name 2</h3>
+        <p>A short description of the dish.</p>
+      </div>
+      <div class="menu-card">
+        <img src="images/ramen.jpg" alt="Dish 3">
+        <h3>Dish Name 3</h3>
+        <p>A short description of the dish.</p>
+      </div>
+    </div>
+  </section>
+
+  
+  <section>
+    <section class="container2">
+      <form action="submit_form.php" method="post" id="form">
+        <div>
+          <h1>Make Reservation</h1><br>
+          <label for="name"><i class="fa-solid fa-user"></i></label> 
+        <input type="text" id="name" name="name" class="Nform" required placeholder="Full Name"><br><br>
+        </div>
+        <div>
+          <label for="email"><i class="fa-solid fa-envelope"></i></label> 
+        <input type="text" id="email" class="Nform" name="email" required placeholder="example@email.com"><br><br>
+        
+        <label for="dob"><i class="fa-solid fa-clock"></i></label> 
+        <input type="datetime-local" id="dob" class="Nform" name="dob" required><br><br>
+        </div>
+      </section>
+      <div class="reservation">
+        <button class="rsve-btn">
+        <label for="submit_form">
+          submit
+        </label>
+        </button>
+      </div>
+    </form>
+    </section>
+    
+     
+
+  <!-- Footer -->
+  <footer class="footer">
+    <h2>Contact Us</h2>
+    <p>Come visit us, or reach out to make a reservation!</p>
+    <div class="contact-info">
+      <p><i class="fa-solid fa-phone"></i> +234 810 444 1372 </p>
+      <p><i class="fa-solid fa-location-dot"></i> 123 Restaurant St, Food City</p>
+      <p><i class="fa-solid fa-envelope"></i> <a href="mailto:oyewoleoyedapo2@gmail.com">info@restaurant.com</a></p>
+    </div>
+    <p>&copy; 2024 Restaurant Name. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    
+  </script>
+</body>
+</html>

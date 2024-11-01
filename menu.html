@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Menu</title>
+  <link rel="stylesheet" href="ht.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+ 
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">Logo.</div>
+    <nav class="nav">
+      <ul>
+        <li><a href="ht.html"><i class="fa-solid fa-house"></i></a></li>
+        <li><a href="about.html"><i class="fa-solid fa-info-circle"></i></a></li>
+        <li><a href="menu.html"> <i class="fa-solid fa-bowl-food"></i></i></a></li>
+        <li><a href="cart.html"><i class="fas fa-concierge-bell"></i></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h2 style="font-size: 50px; font-weight: bolder; text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif; ">
+    OUR MENU
+  </h2>
+
+  <section class="menu-container">
+    <div class="menu-cards">
+      <div class="menu-card">
+        <img src="images\sushi.jpg" alt="Dish 1">
+        <h3>Dish Name 1</h3>
+        <p>A short description of the dish.</p>
+        <a href="">
+          <button class="order-btn">
+             Order
+          </button>
+        </a>
+      </div>
+      <div class="menu-card">
+        <img src="images\ramen.jpg" alt="Dish 2">
+        <h3>Dish Name 2</h3>
+        <p>A short description of the dish.</p>
+        <a href="">
+          <button class="order-btn">
+             Order
+          </button>
+        </a>
+      </div>
+      <div class="menu-card">
+        <img src="images/sushi.jpg" alt="Dish 3">
+        <h3>Dish Name 3</h3>
+        <p>A short description of the dish.</p>
+        <a href="">
+          <button class="order-btn">
+             Order
+          </button>
+        </a>
+      </div>
+      </div>
+  </section>
+  <section class="menu-container">
+    <div class="menu-cards">
+      <div class="menu-card">
+        <img src="images\sushi.jpg" alt="Dish 1">
+        <h3>Dish Name 1</h3>
+        <p>A short description of the dish.</p>
+        <a href="">
+          <button class="order-btn">
+             Order
+          </button>
+        </a>
+      </div>
+      <div class="menu-card">
+        <img src="images\ramen.jpg" alt="Dish 2">
+        <h3>Dish Name 2</h3>
+        <p>A short description of the dish.</p>
+        <a href="">
+          <button class="order-btn">
+             Order
+          </button>
+        </a>
+      </div>
+      <div class="menu-card">
+        <img src="images/ramen.jpg" alt="Dish 3">
+        <h3>Dish Name 3</h3>
+        <p>A short description of the dish.</p>
+        <a href="">
+          <button class="order-btn">
+             Order
+          </button>
+        </a>
+      </div>
+      </div>
+  </section>
+
+  <section class="menu-container">
+    <div class="menu-cards">
+      <div class="menu-card">
+        <img src="images\sushi.jpg" alt="Dish 1">
+        <h3>Dish Name 1</h3>
+        <p>A short description of the dish.</p>
+        <a href="">
+          <button class="order-btn">
+             Order
+          </button>
+        </a>
+      </div>
+      <div class="menu-card">
+        <img src="images\ramen.jpg" alt="Dish 2">
+        <h3>Dish Name 2</h3>
+        <p>A short description of the dish.</p>
+        <a href="">
+          <button class="order-btn">
+             Order
+          </button>
+        </a>
+      </div>
+      <div class="menu-card">
+        <img src="images/ramen.jpg" alt="Dish 3">
+        <h3>Dish Name 3</h3>
+        <p>A short description of the dish.</p>
+        <a href="">
+          <button class="order-btn">
+             Order
+          </button>
+        </a>
+      </div>
+      </div>
+  </section>
+
+  
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <h2>Contact Us</h2>
+    <p>Come visit us, or reach out to make a reservation!</p>
+    <div class="contact-info">
+      <p><i class="fa-solid fa-phone"></i> +234 810 444 1372 </p>
+      <p><i class="fa-solid fa-location-dot"></i> 123 Restaurant St, Food City</p>
+      <p><i class="fa-solid fa-envelope"></i> info@restaurant.com</p>
+    </div>
+    <p>&copy; 2024 Restaurant Name. All Rights Reserved.</p>
+  </footer>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+  const menuSections = document.querySelectorAll(".menu-container");
+  
+  menuSections.forEach((section, index) => {
+    // Delay each section's fade-in for a slight staggered effect
+    setTimeout(() => {
+      section.classList.add("fade-in");
+    }, index * 300); // Adjust timing as needed for stagger effect
+  });
+});
+  </script>
+</body>
+</html>

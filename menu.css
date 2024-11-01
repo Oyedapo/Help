@@ -1,0 +1,76 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* General Styles */
+body {
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5vw;
+  background-color: rgb(42, 41, 43);
+  color: #fff;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav ul li {
+  margin-left: 20px;
+}
+
+.nav ul li a {
+  color: #fff;
+  font-weight: bolder;
+}
+
+
+.nav ul li i:hover{
+  background-color: white;
+  padding: 5px;
+  border-radius: 1em;
+  transition:  0.2s ease-in-out;
+  color: black;
+}
+
+
+
+
+.menu-container{
+  background-color: aqua;
+}
+
+
+
+
+
+
+
+/* Footer */
+.footer {
+  padding: 20px 5vw;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
