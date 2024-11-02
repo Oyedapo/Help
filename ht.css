@@ -247,7 +247,7 @@ input {
 .slide-wrapper{
   display: flex;
   width: 100%;
-  animation: slide 16s infinite;
+  animation: slide 30s infinite;
 }
 
 @keyframes slide{
@@ -265,7 +265,6 @@ input {
     transform: translateX(-100%);
   }
   
-
   50%{
     transform: translateX(-200%);
   }
