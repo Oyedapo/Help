@@ -69,6 +69,14 @@ a {
   justify-content: center;
   color: #fff;
   text-align: center;
+  opacity: 0;
+  transform: scale(0.9); /* Start slightly smaller */
+  transition: opacity 1s ease, transform 1s ease; /* Smooth transitions */
+}
+
+.hero.pop-up {
+  opacity: 1;
+  transform: scale(1); /* Scale to normal size */
 }
 
 .hero-content h1 {

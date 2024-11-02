@@ -24,7 +24,7 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-content">
+    <div class="hero-content" >
       <h1>Welcome to Our Restaurant</h1>
       <p>Delicious food, delightful ambiance, and memorable experiences.</p>  
       <a href="menu.html" class="btn">Explore Our Menu</a>    
@@ -77,11 +77,12 @@
         </div>
       </section>
       <div class="reservation">
-        <button class="rsve-btn">
-        <label for="submit_form">
-          submit
-        </label>
+        <button type="submit" class="rsve-btn" onclick="return confirmReservation()">
+          Submit
         </button>
+      </div>
+    </form>
+  </section>
       </div>
     </form>
     </section>
@@ -101,7 +102,14 @@
   </footer>
 
   <script>
-    
+      window.addEventListener("load", function() {
+    document.querySelector(".hero").classList.add("pop-up");
+  });
+
+    function confirmReservation() {
+      return confirm("Confirm Reservation?");
+    }
+
   </script>
 </body>
 </html>
