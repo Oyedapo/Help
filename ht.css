@@ -199,6 +199,27 @@ a {
   padding: 0 15px 15px;
 }
 
+.quantity-controls {
+  
+  align-items: center;
+  margin: 10px 0;
+}
+
+.qty-btn {
+  width: 30px;
+  height: 30px;
+  background-color: #ddd;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.quantity {
+  margin: 0 10px;
+  font-size: 20px;
+}
+
+
 .container2{
   font-size: large;
   font-weight: bold;
@@ -298,8 +319,6 @@ input {
   width: 100%;
 }
 
-
-
 .cart-container{
   margin-top: 3vh;
   display: flex;
@@ -322,7 +341,8 @@ input {
 }
 
 .cart-1 img{
-  height: 20vh;
+ height: 30vh;
+ 
 }
 
 .crt-btn{
@@ -337,8 +357,6 @@ input {
   border-radius: 10px;
 }
 
-
-
 .crt-btn:hover{
   background-color: #f8f8f8;
   cursor: pointer;
@@ -350,18 +368,34 @@ input {
 }
 
 .checkout{
-  display: flex;
-  position: end;
-  text-align: center;
   background-color: rgb(236, 234, 234);
-  justify-content: center;
   border-radius: 10px;
   border-style: solid;
-  height: 40vh;
-  margin-left: 5vh;
+  height: fit-content;
+  width: 50vw;
+  margin-left: 50vh;
   margin-right: 5vh;
   margin-top: 5vw;
   margin-bottom: 20px;
+}
+
+
+.checkout h1 {
+  font-weight: 800;
+  text-align: center;
+  justify-content: center;
+}
+
+.checkout h3 {
+  font-weight: bold;
+  justify-content: end;
+  margin-left: 5vh;
+}
+
+.checkout p {
+  justify-content: baseline;
+  margin-top: 8vh;
+  margin-right: vh;
 }
 
 .footer p {
@@ -385,7 +419,6 @@ input {
 .footer a{
   color: white;
 }
-
 
 .menu-container{
  margin-top: 20px;
