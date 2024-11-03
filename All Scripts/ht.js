@@ -1,4 +1,4 @@
-const products = [
+export const menu = [
   {
     id: "72j4-k8-q9p5",
     name: "Tonkotsu Ramen",
@@ -93,3 +93,37 @@ const products = [
 ]
 
 // I made it 13 sha 
+//no wam
+
+//so this function would help with the calculation of the prices and convert it from cents to dollars
+
+export function formatCurrency (priceCents) {
+  return (Math.round(priceCents) / 100).toFixed(2)
+}
+
+//demo
+console.log(formatCurrency(1050))
+
+//this function would get an item in the menu by just using the id so we can use it to specify a bunch of things
+
+function getDish (dishId) {
+  let matchingDish 
+  menu.forEach((dish) => {
+    if (dish.id === dishId)
+    {
+      matchingDish = dish
+    }
+  })
+  return matchingDish
+}
+//demo
+console.log(getDish("g9w0-d4-72j4"))
+
+//the forEach function acceses every single object as in the ones in {}, in the array(aka menu), you could literally do anything with it, you could uncomment it to check it out
+/*
+menu.forEach((dish) => {
+  console.log(dish.name)
+  //check out the function.
+  console.log(`$${formatCurrency(dish.priceCents)}`)
+})
+*/
