@@ -3,14 +3,14 @@ console.log('Send Help')
 
 export let cart = []
 
-function saveTostorage() {
+function saveToStorage() {
   loadFromStorage.setItem('cart', JSON.stringify(cart))
 }
 
 export function loadFromStorage() {
   cart = JSON.parse(localStorage.getItem('cart'))
 
-  if (!cart) {
+  if (cart) {
     cart = [
       {
         id: "1w0r-36-2d4h",

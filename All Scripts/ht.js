@@ -67,7 +67,7 @@ export const menu = [
     name: "Sakura Matcha Dessert",
     image: "images/Sakura Matcha Dessert.jpg",
     keyword: ["dessert", "matcha"],
-    priceCents:  2500
+    priceCents:  900
   },
   {
     id: "9w0d-47-2j4k",
@@ -87,8 +87,8 @@ export const menu = [
     id: "4c0d-1g-3g7a",
     name: "Sukiyaki",
     image: "images/sukiyaki.jpg",
-    keyword: ["onigir", "rice"],
-    priceCents:  300
+    keyword: ["onigiri", "rice"],
+    priceCents:  1800
   }
 ]
 

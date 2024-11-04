@@ -321,13 +321,18 @@ input {
 
 .cart-container{
   margin-top: 3vh;
-  display: flex;
-  gap: 30px;
+  display: inline;
+  gap: 40px;
+}
+
+.cart{
+  margin-left: 5vh;
+  margin-top: 5vh;
 }
 
 .cart-container img{
   border-radius: 5px;
-  margin-left: 2vh;
+  height: 30vh;
 }
 
 .cart-container p{
@@ -340,10 +345,8 @@ input {
   font-size: 20px;
 }
 
-.cart-1 img{
- height: 30vh;
- 
-}
+
+
 
 .crt-btn{
   margin-top: 2vh;
@@ -367,14 +370,17 @@ input {
   color: rgb(255, 255, 255);
 }
 
+.container3 {
+  display: flex;
+  justify-content: center;
+}
+
 .checkout{
   background-color: rgb(236, 234, 234);
   border-radius: 10px;
   border-style: solid;
   height: fit-content;
-  width: 50vw;
-  margin-left: 50vh;
-  margin-right: 5vh;
+  width: 80vh;
   margin-top: 5vw;
   margin-bottom: 20px;
 }
