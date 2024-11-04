@@ -1,34 +1,32 @@
+import { getDish } from "./ht.js"
+
 console.log('Send Help')  
 //lmao
 
 export let cart = []
 
 function saveToStorage() {
-  loadFromStorage.setItem('cart', JSON.stringify(cart))
+  loadFromStorage.setItem('cart-for-ht', JSON.stringify(cart))
 }
 
 export function loadFromStorage() {
-  cart = JSON.parse(localStorage.getItem('cart'))
+  cart = JSON.parse(localStorage.getItem('cart-for-ht'))
 
-  if (cart) {
+  if (!cart) {
     cart = [
       {
         id: "1w0r-36-2d4h",
-        name: "Unagi Donburi (Grilled Eel Bowl)",
-        image: "images/Unari Donburi.jpg",
-        keyword: ["unagi"],
-        priceCents:  2500
+        quantity: 2
       },
       {
         id: "k8q9-p5-72j4",
-        name: "Tempura",
-        image: "images/tempura.jpg",
-        keyword: ["tempura", "shrimp"],
-        priceCents:  1500
+        quantity: 1
       }
     ]
   }
 }
+
+loadFromStorage()
 
 /*
 what these are is basically explained in the function's name 
@@ -55,7 +53,7 @@ export function addToCart(dishId) {
     })
   }
 
-  saveTostorage()
+  saveToStorage()
 }
 //this is simple enough to read through, right?
 
@@ -69,6 +67,27 @@ export function removeFromCart(dishId) {
   })
 
   cart = newCart
-  saveTostorage()
+  saveToStorage()
 }
 //if you need me to explain anything lmk
+
+export function calculateCartQuantity() {
+  let cartQuantity = 0
+  cart.forEach(dish => {
+    cartQuantity += dish.quantity
+  })
+  return cartQuantity
+}
+
+
+cart.forEach(dish => {
+  const {dishId} = dish.id
+
+  let matchingDish = getDish(dishId)
+
+  let cartSummary = ''
+   
+})
+
+console.log(getDish("72j4-k8-q9p5"))
+console.log(calculateCartQuantity())

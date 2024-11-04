@@ -106,7 +106,7 @@ console.log(formatCurrency(1050))
 
 //this function would get an item in the menu by just using the id so we can use it to specify a bunch of things
 
-function getDish (dishId) {
+export function getDish (dishId) {
   let matchingDish 
   menu.forEach((dish) => {
     if (dish.id === dishId)
