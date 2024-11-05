@@ -1,3 +1,5 @@
+import {menu} from "./ht.js"
+
 console.log('Send Help')  
 //lmao
 
@@ -55,7 +57,7 @@ export function addToCart(dishId) {
     })
   }
 
-  saveTostorage()
+  saveToStorage()
 }
 //this is simple enough to read through, right?
 
@@ -72,3 +74,5 @@ export function removeFromCart(dishId) {
   saveTostorage()
 }
 //if you need me to explain anything lmk
+
+menu.forEach
