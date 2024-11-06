@@ -1,79 +1,75 @@
 import { getDish } from "./ht.js"
 import { menu } from "./menu.js"
+import { formatCurrency, menu } from "./ht.js";
+import { getDish } from "./ht.js";
 
-console.log('Send Help')  
+console.log("Send Help");
 //lmao
-
-export let cart = []
+export let cart = [];
 
 function saveToStorage() {
   localStorage.setItem('cart-for-ht', JSON.stringify(cart))
+  localStorage.setItem("cart-for-ht", JSON.stringify(cart));
 }
 
 export function loadFromStorage() {
-  cart = JSON.parse(localStorage.getItem('cart-for-ht'))
+  const storedCart = JSON.parse(localStorage.getItem("cart-for-ht"));
 
-  if (!cart) {
+  if (storedCart) {
+    cart = storedCart;
+  } else {
     cart = [
       {
-        id: "1w0r-36-2d4h",
-        quantity: 2
+        id: "k2q9-p4-77j2",
+        quantity: 2,
       },
       {
         id: "k8q9-p5-72j4",
-        quantity: 1
+        quantity: 1,
       }
-    ]
+    ];
   }
 }
 
-loadFromStorage()
-
-/*
-what these are is basically explained in the function's name 
-and if you and to understand in details you'd have to watch the video (i could send a vn, just ask if needed)
-
-i highkey copied this stuff cause i really can't be stressing that much
-*/
+loadFromStorage();
 
 export function addToCart(dishId) {
-  let matchingDish
+  let matchingDish;
 
   cart.forEach((dish) => {
     if (dishId === dish.id) {
-      matchingDish = dish
+      matchingDish = dish;
     }
-  })
+  });
 
-  if(matchingDish) {
-    matchingDish.quantity += 1
-  } else {
+  if (matchingDish) {
+    matchingDish.quantity += 1;
+  } 
+  else {
     cart.push({
       id: dishId,
-      quantity: 1
-    })
+      quantity: 1,
+    });
   }
 
-  saveToStorage()
+  saveToStorage();
 }
-//this is simple enough to read through, right?
 
 export function removeFromCart(dishId) {
-  let newCart = []
-
-  cart.forEach((dish) => {
-    if(dishId !== dish.id) {
-      newCart.push(dish)
-    }
-  })
-
-  cart = newCart
-  saveToStorage()
+  cart = cart.filter((dish) => dish.id !== dishId);
+  saveToStorage();
 }
 
 //if you need me to explain anything lmk
 
 export function calculateCartQuantity() {
+  return cart.reduce((total, dish) => total + dish.quantity, 0);
+}
+
+// Displaying all cart items
+let cartSummary = "";
+cart.forEach((dish) => {
+  const dishId = dish.id;
   let cartQuantity = 0
   cart.forEach(dish => {
     cartQuantity += dish.quantity
@@ -88,6 +84,30 @@ export function updateCart() {
 /*
 cart.forEach(dish => {
   const {dishId} = dish.id
+
+  let matchingDish = getDish(dishId);
+
+  cartSummary += `
+    <div class="cart-1">
+        <img src="${matchingDish.image}" alt="">
+      </div>
+      <div class="cart-btn">
+        <p>
+          ${matchingDish.name} <br>
+          $${formatCurrency(matchingDish.priceCents)}<br>
+          Quantity: ${dish.quantity}
+        </p>
+        <button class="crt-btn" onclick="removeFromCart('${dishId}')">
+          delete
+        </button>
+      </div>
+  `;
+});
+
+document.querySelector(".js-cart").innerHTML = cartSummary;
+
+console.log(getDish("72j4-k8-q9p5"));
+console.log(calculateCartQuantity());
 
   let matchingDish = getDish(dishId)
 
