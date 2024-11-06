@@ -1,4 +1,5 @@
 import { getDish } from "./ht.js"
+import { menu } from "./menu.js"
 
 console.log('Send Help')  
 //lmao
@@ -6,7 +7,7 @@ console.log('Send Help')
 export let cart = []
 
 function saveToStorage() {
-  loadFromStorage.setItem('cart-for-ht', JSON.stringify(cart))
+  localStorage.setItem('cart-for-ht', JSON.stringify(cart))
 }
 
 export function loadFromStorage() {
@@ -69,6 +70,7 @@ export function removeFromCart(dishId) {
   cart = newCart
   saveToStorage()
 }
+
 //if you need me to explain anything lmk
 
 export function calculateCartQuantity() {
@@ -79,7 +81,11 @@ export function calculateCartQuantity() {
   return cartQuantity
 }
 
+export function updateCart() {
+  document.querySelector('.js-cart-quantity').innerHTML = calculateCartQuantity()
+}
 
+/*
 cart.forEach(dish => {
   const {dishId} = dish.id
 
@@ -88,6 +94,7 @@ cart.forEach(dish => {
   let cartSummary = ''
    
 })
+  */
 
 console.log(getDish("72j4-k8-q9p5"))
 console.log(calculateCartQuantity())

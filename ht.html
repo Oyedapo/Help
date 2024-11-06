@@ -40,21 +40,24 @@
   <!-- Menu Highlights Section -->
   <section id="menu" class="menu">
     <h2>Menu Highlights</h2>
-    <div class="menu-cards">
+    <div class="menu-cards js-menu-cards">
       <div class="menu-card">
         <img src="images/Onigiri.jpg" alt="Onigiri">
         <h3>Onigiri</h3>
         <p>Rice balls with various fillings, wrapped in seaweed.</p>
+        <button class="order-btn js-add-to-cart">Add To Cart</button>
       </div>
       <div class="menu-card">
         <img src="images/sushi.jpg" alt="Sushi">
         <h3>Sushi</h3>
         <p>Vinegared rice with fresh seafood.</p>
+        <button class="order-btn js-add-to-cart">Add To Cart</button>
       </div>
       <div class="menu-card">
         <img src="images/ramen.jpg" alt="Tonkotsu Ramen">
         <h3>Tonkotsu Ramen</h3>
         <p>Creamy pork broth with noodles and toppings.</p>
+        <button class="order-btn js-add-to-cart">Add To Cart</button>
       </div>
     </div>
   </section>
@@ -101,15 +104,8 @@
     <p>&copy; 2024 Restaurant Name. All Rights Reserved.</p>
   </footer>
 
-  <script>
-      window.addEventListener("load", function() {
-    document.querySelector(".hero").classList.add("pop-up");
-  });
-
-    function confirmReservation() {
-      return confirm("Confirm Reservation?");
-    }
-
+  <script src="All Scripts/ht.js" type="module">
+      
   </script>
 </body>
 </html>
