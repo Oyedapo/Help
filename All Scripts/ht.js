@@ -37,7 +37,7 @@ export const menu = [
   {
     id: "1w0r-36-2d4h",
     name: "Unagi Donburi (Grilled Eel Bowl)",
-    image: "images/Unari Donburi.jpg",
+    image: "images/Unagi Donburi.jpg",
     keyword: ["unagi"],
     priceCents:  2500
   },
