@@ -1,7 +1,5 @@
-import { getDish } from "./ht.js"
-import { menu } from "./menu.js"
-import { formatCurrency, menu } from "./ht.js";
-import { getDish } from "./ht.js";
+import { getDish, formatCurrency} from "./ht.js"
+import { menu } from "./dishes-available.js"
 
 console.log("Send Help");
 //lmao
@@ -9,7 +7,6 @@ export let cart = [];
 
 function saveToStorage() {
   localStorage.setItem('cart-for-ht', JSON.stringify(cart))
-  localStorage.setItem("cart-for-ht", JSON.stringify(cart));
 }
 
 export function loadFromStorage() {
@@ -21,17 +18,20 @@ export function loadFromStorage() {
     cart = [
       {
         id: "k2q9-p4-77j2",
-        quantity: 2,
+        quantity: 2
       },
       {
         id: "k8q9-p5-72j4",
-        quantity: 1,
+        quantity: 1
       }
     ];
   }
 }
 
 loadFromStorage();
+
+renderOrderSummary()
+renderPaymentSummary()
 
 export function addToCart(dishId) {
   let matchingDish;
@@ -48,28 +48,24 @@ export function addToCart(dishId) {
   else {
     cart.push({
       id: dishId,
-      quantity: 1,
+      quantity: 1
     });
   }
 
+  renderOrderSummary()
+  renderPaymentSummary()
   saveToStorage();
 }
 
 export function removeFromCart(dishId) {
   cart = cart.filter((dish) => dish.id !== dishId);
+  renderOrderSummary()
+  renderPaymentSummary()
   saveToStorage();
 }
 
-//if you need me to explain anything lmk
 
 export function calculateCartQuantity() {
-  return cart.reduce((total, dish) => total + dish.quantity, 0);
-}
-
-// Displaying all cart items
-let cartSummary = "";
-cart.forEach((dish) => {
-  const dishId = dish.id;
   let cartQuantity = 0
   cart.forEach(dish => {
     cartQuantity += dish.quantity
@@ -80,12 +76,15 @@ cart.forEach((dish) => {
 export function updateCart() {
   document.querySelector('.js-cart-quantity').innerHTML = calculateCartQuantity()
 }
+//updateCart()
 
-/*
+export function renderOrderSummary() {
+// Displaying all cart items
+let cartSummary = ''
 cart.forEach(dish => {
-  const {dishId} = dish.id
+  const dishId = dish.id
 
-  let matchingDish = getDish(dishId);
+  let matchingDish = getDish(dishId)
 
   cartSummary += `
     <div class="cart-1">
@@ -97,7 +96,7 @@ cart.forEach(dish => {
           $${formatCurrency(matchingDish.priceCents)}<br>
           Quantity: ${dish.quantity}
         </p>
-        <button class="crt-btn" onclick="removeFromCart('${dishId}')">
+        <button class="crt-btn js-delete" data-dish-id = "${dish.id}">
           delete
         </button>
       </div>
@@ -105,16 +104,74 @@ cart.forEach(dish => {
 });
 
 document.querySelector(".js-cart").innerHTML = cartSummary;
+}
 
-console.log(getDish("72j4-k8-q9p5"));
-console.log(calculateCartQuantity());
 
+document.querySelectorAll('.js-delete').forEach(button => {
+  button.addEventListener('click', () => {
+    const dishId = button.dataset.dishId
+    removeFromCart(dishId)
+  })
+})
+
+export function renderPaymentSummary() {
+let orderSummary = ''
+let totalItems = 0
+let priceBeforeFees = 0
+let totalPrice = 0
+
+cart.forEach(dish => {
+  const dishId = dish.id
   let matchingDish = getDish(dishId)
 
-  let cartSummary = ''
-   
+  priceBeforeFees += (matchingDish.priceCents * dish.quantity)
 })
-  */
 
-console.log(getDish("72j4-k8-q9p5"))
-console.log(calculateCartQuantity())
+totalPrice += 99 + 500 + priceBeforeFees
+//console.log(priceBeforeFees)
+//console.log(totalPrice)
+
+orderSummary += `
+  <h1>
+    Order Summary
+  </h1>
+  <h3>Items: ${calculateCartQuantity()}</h3> 
+  <h3>Price: $${formatCurrency(priceBeforeFees)}</h3> 
+  <h3>Service Fee: $0.99</h3>
+  <h3>Delivery Fee: $5</h3><br><hr style="border-style: solid;">
+  <h3>Total: $${formatCurrency(totalPrice)}</h3> 
+  <button class="crt-btn" style="margin-left: 30vh; ">
+    Place Order
+  </button>
+`
+document.querySelector('.js-checkout').innerHTML = orderSummary
+}
+
+
+/*
+document.querySelector('.js-crt-btn').addEventListener('click', () => {
+  document.querySelector('.js-place-order').innerHTML =
+  `
+  <div style= "width: 4rem">
+    <p style= "word-wrap: wrap">Thank you for using our website, our delivery personell would call soon</p>
+    <p>Want more? <button class="crt-btn">Menu</button> </p>
+  </div>
+  `
+})
+
+ 
+<span class="js-edit-value">
+  <button class="crt-btn js-edit" data-dish-id = "${dish.id}">Edit Quantity</button>
+</span>
+
+  document.querySelectorAll('.js-edit').forEach(button => {
+   button.addEventListener('click', () => {
+    document.querySelector('.js-edit-value').innerHTML =
+      `
+        <input type="text" placeholder="enter desired quantity">
+      `
+    })
+  })
+*/
+
+
