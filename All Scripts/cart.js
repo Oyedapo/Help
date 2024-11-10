@@ -96,22 +96,43 @@ cart.forEach(dish => {
           $${formatCurrency(matchingDish.priceCents)}<br>
           Quantity: ${dish.quantity}
         </p>
-        <button class="crt-btn js-delete" data-dish-id = "${dish.id}">
+        <button class="crt-btn js-delete js-delete-${dish.id}" data-dish-id = "${dish.id}">
           delete
         </button>
       </div>
   `;
 });
 
-document.querySelector(".js-cart").innerHTML = cartSummary;
+if (cart.length == 0) {
+  let cartPage = document.querySelector('.js-cart')
+  cartPage.classList.add('js-whole-cart')
+  document.querySelector('.js-whole-cart').innerHTML = "<h2> There is nothing in cart. </h2> <h4>why don't you spoil yourself and get some good food?</h4> <button class='redirect'>Menu</button>"
+} else document.querySelector(".js-cart").innerHTML = cartSummary;
 }
 
+document.querySelector('.redirect').addEventListener('click', () => {
+  window.location.href = 'menu.html'
+})
 
 document.querySelectorAll('.js-delete').forEach(button => {
   button.addEventListener('click', () => {
     const dishId = button.dataset.dishId
     removeFromCart(dishId)
+    window.location.reload()
   })
+})
+
+document.querySelector('.js-clear-cart').addEventListener('click', () => {
+  cart.length = 0
+  saveToStorage()
+  window.location.reload()
+  /*
+  let cartPage = document.querySelector('.js-cart')
+  cartPage.classList.add('js-whole-cart')
+  document.querySelector('.js-whole-cart').innerHTML = "<h2> You just cleared your cart.</h2> <h5> hope you're happy.</h5> <button class= 'redirect'>Go To Menu</button>"
+  renderOrderSummary()
+  */
+  renderPaymentSummary()
 })
 
 export function renderPaymentSummary() {
@@ -127,11 +148,28 @@ cart.forEach(dish => {
   priceBeforeFees += (matchingDish.priceCents * dish.quantity)
 })
 
-totalPrice += 99 + 500 + priceBeforeFees
 //console.log(priceBeforeFees)
 //console.log(totalPrice)
 
-orderSummary += `
+if (cart.length == 0) {
+  totalPrice += 0 + priceBeforeFees
+  orderSummary += `
+    <h1>
+    Order Summary
+  </h1>
+  <h3>Items: ${calculateCartQuantity()}</h3> 
+  <h3>Price: $${formatCurrency(priceBeforeFees)}</h3> 
+  <h3>Service Fee: $0</h3>
+  <h3>Delivery Fee: $0</h3><br><hr style="border-style: solid;">
+  <h3>Total: $${formatCurrency(totalPrice)}</h3> 
+  <button class="crt-btn" style="margin-left: 30vh; ">
+    Place Order
+  </button>
+  `
+} else {
+  totalPrice += 99 + 500 + priceBeforeFees
+
+  orderSummary += `
   <h1>
     Order Summary
   </h1>
@@ -143,7 +181,9 @@ orderSummary += `
   <button class="crt-btn" style="margin-left: 30vh; ">
     Place Order
   </button>
-`
+ `
+}
+
 document.querySelector('.js-checkout').innerHTML = orderSummary
 }
 
