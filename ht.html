@@ -11,13 +11,13 @@
 
   <!-- Header -->
   <header class="header">
-    <div class="logo">Logo.</div>
+    <div class="logo"><a href="ht.html">Logo.</a></div>
     <nav class="nav">
       <ul>
-        <li><a href="ht.html"><i class="fa-solid fa-house"></i></a></li>
-        <li><a href="about.html"><i class="fa-solid fa-info-circle"></i></a></li>
-        <li><a href="menu.html"> <i class="fa-solid fa-bowl-food"></i></i></a></li>
-        <li><a href="cart.html"><i class="fas fa-concierge-bell"></i></a></li>
+        <li><a href="ht.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html"> Menu</a></li>
+        <li><a href="cart.html">Order</a></li>
       </ul>
     </nav>
   </header>
@@ -34,14 +34,17 @@
   <!-- About Section -->
   <section id="about" class="about">
     <h2>About Us</h2>
-    <p>Our restaurant is known for its unique flavors and dedication to quality. We use fresh ingredients and traditional recipes to bring you an authentic dining experience.</p>
+    <p>
+      Welcome to Ichiraku Ramen, your ultimate destination for authentic Japanese cuisine in the heart of the city. At Ichiraku Ramen, we take pride in bringing the rich flavors and traditions of Japan to your table.
+      Our restaurant is known for its unique flavors and dedication to quality. <a href="about.html" style="color: blue;">read more....</a>
+    </p>
   </section>
 
   <!-- Menu Highlights Section -->
   <section id="menu" class="menu">
     <h2>Menu Highlights</h2>
     <div class="menu-cards js-menu-cards">
-      <!-- <div class="menu-card">
+      <div class="menu-card">
         <img src="images/Onigiri.jpg" alt="Onigiri">
         <h3>Onigiri</h3>
         <p>Rice balls with various fillings, wrapped in seaweed.</p>
@@ -58,7 +61,7 @@
         <h3>Tonkotsu Ramen</h3>
         <p>Creamy pork broth with noodles and toppings.</p>
         <button class="order-btn js-add-to-cart">Add To Cart</button>
-      </div> -->
+      </div>
     </div>
   </section>
 
@@ -107,7 +110,15 @@
   </footer>
 
   <script src="All Scripts/ht.js" type="module">
-      
+  </script>
+  <script>
+    window.addEventListener("load", function() {
+  document.querySelector(".hero").classList.add("pop-up");
+});
+
+  function confirmReservation() {
+    return confirm("Confirm Reservation?");
+  }
   </script>
 </body>
 </html>

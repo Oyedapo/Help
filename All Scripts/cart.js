@@ -106,7 +106,7 @@ cart.forEach(dish => {
 if (cart.length == 0) {
   let cartPage = document.querySelector('.js-cart')
   cartPage.classList.add('js-whole-cart')
-  document.querySelector('.js-whole-cart').innerHTML = "<h2> There is nothing in cart. </h2> <h4>why don't you spoil yourself and get some good food?</h4> <button class='redirect'>Menu</button>"
+  document.querySelector('.js-whole-cart').innerHTML = "<h2> There is nothing in cart. </h2><br><br> <h4>why don't you spoil yourself and get some good food?</h4> <button class='redirect'>Menu</button>"
 } else document.querySelector(".js-cart").innerHTML = cartSummary;
 }
 

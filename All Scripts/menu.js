@@ -2,14 +2,7 @@ import { addToCart } from "./cart.js";
 import { menu } from "./dishes-available.js";
 import { getDish } from "./ht.js";
 
-document.addEventListener("DOMContentLoaded", function () {
-  const menuSections = document.querySelectorAll(".menu-container");
-  menuSections.forEach((section, index) => {
-    setTimeout(() => {
-      section.classList.add("fade-in");
-    }, index * 100);
-  });
-});
+
 
 
 const orderButton = document.querySelectorAll('.order-btn')

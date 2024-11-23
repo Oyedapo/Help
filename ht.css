@@ -10,10 +10,14 @@
 body {
   color: #333;
   line-height: 1.6;
+  max-width: 95%;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 a {
-  color: #333;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -46,19 +50,18 @@ a {
   font-weight: bolder;
 }
 
-.nav ul li i{
+.nav ul li {
   font-weight: bolder;
   font-size: 20px;
 }
 
-.nav ul li i:hover{
+.nav ul li a:hover{
   background-color: white;
   padding: 5px;
-  border-radius: 1em;
+  border-radius: 0.5em;
   transition:  0.2s ease-in-out;
   color: black;
 }
-
 
 /* Hero Section */
 .hero {
@@ -70,13 +73,13 @@ a {
   color: #fff;
   text-align: center;
   opacity: 0;
-  transform: scale(0.9); /* Start slightly smaller */
-  transition: opacity 1s ease, transform 1s ease; /* Smooth transitions */
+  transform: scale(0.9); 
+  transition: opacity 1s ease, transform 1s ease; 
 }
 
 .hero.pop-up {
   opacity: 1;
-  transform: scale(1); /* Scale to normal size */
+  transform: scale(1); 
 }
 
 .hero-content h1 {
@@ -199,27 +202,6 @@ a {
   padding: 0 15px 15px;
 }
 
-.quantity-controls {
-  
-  align-items: center;
-  margin: 10px 0;
-}
-
-.qty-btn {
-  width: 30px;
-  height: 30px;
-  background-color: #ddd;
-  border: none;
-  cursor: pointer;
-  font-size: 20px;
-}
-
-.quantity {
-  margin: 0 10px;
-  font-size: 20px;
-}
-
-
 .container2{
   font-size: large;
   font-weight: bold;
@@ -257,7 +239,6 @@ input {
   justify-content: center;
 }
 
-
 .rsve-btn{
   margin-bottom: 10px;
   font-weight: bold;
@@ -280,7 +261,7 @@ input {
 }
 
 .slideshow-container {
-  margin-top: 50vh;
+  margin-top: 40vh;
   width: 80vmin;
   height: fit-content;
   position: relative;
@@ -319,6 +300,36 @@ input {
   width: 100%;
 }
 
+.about-container{
+  display: flex;
+  gap: 30px;
+ 
+}
+
+.about-container h1, h2{
+  text-align: center;
+  font-size: larger;
+  font-weight: 900;
+}
+
+.comment-container{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  margin-bottom: 10vh;
+  margin-top: 2vh;
+  border-width: 20px;
+}
+
+.comment1, .comment2{
+  background-color: #fcfcfc;
+  border-radius: 10px;
+  text-align: center;
+  border-style: solid;
+  border-color: #e5e7eb;
+  height: fit-content;
+}
+
 .cart-container{
   margin-top: 3vh;
   display: flex;
@@ -328,8 +339,6 @@ input {
 }
 
 .cart{
-  
-  display: flex;
   flex-wrap: wrap;
   gap: 20px;
   max-width: 100%;
@@ -351,7 +360,7 @@ input {
 }
 
 .cart-container img{
-  max-width: 100%;
+  width: 40vh;
   height: auto;
   border-radius: 5px;
 }
@@ -416,7 +425,6 @@ input {
   margin-top: 5vw;
   margin-bottom: 20px;
 }
-
 
 .checkout h1 {
   font-weight: 800;

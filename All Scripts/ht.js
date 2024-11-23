@@ -2,13 +2,7 @@ import { addToCart, calculateCartQuantity, updateCart } from "./cart.js";
 import { menu } from "./dishes-available.js";
 
 
-window.addEventListener("load", function() {
-  document.querySelector(".hero").classList.add("pop-up");
-});
 
-  function confirmReservation() {
-    return confirm("Confirm Reservation?");
-  }
 
 
 // I made it 13 sha 
