@@ -1,171 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Restaurant Menu</title>
-  <link rel="stylesheet" href="ht.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Menu</title>
+    <link rel="stylesheet" href="ht.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="logo"><a href="ht.html">Logo.</a></div>
+      <nav class="nav">
+        <ul>
+          <li><a href="ht.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="menu.html"> Menu</a></li>
+          <li><a href="cart.html">Order</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <!-- Header -->
-  <header class="header">
-    <div class="logo"><a href="ht.html">Logo.</a></div>
-    <nav class="nav">
-      <ul>
-        <li><a href="ht.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="menu.html"> Menu</a></li>
-        <li><a href="cart.html">Order</a></li>
-      </ul>
-    </nav>
-  </header>
+    <h2
+      style="
+        font-size: 50px;
+        font-weight: bolder;
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      "
+    >
+      OUR MENU
+    </h2>
 
-  <h2 style="font-size: 50px; font-weight: bolder; text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif;">
-    OUR MENU
-  </h2>
+    <section class="menu-container js-menu-container">
+      <div class="menu-cards">
+        <div class="menu-card">
+          <img src="images/sushi.jpg" alt="Sushi" />
+          <h3>Sushi</h3>
+          <p>Vinegared rice with fresh seafood.</p>
+          <p><strong>Price:</strong> $25.00</p>
+          <button class="order-btn" data-dish-id="p2m5-x1-g9w0">
+            Add To Cart
+          </button>
+        </div>
+        <div class="menu-card">
+          <img src="images/ramen.jpg" alt="Tonkotsu Ramen" />
+          <h3>Tonkotsu Ramen</h3>
+          <p>Creamy pork broth with noodles and toppings.</p>
+          <p><strong>Price:</strong> $10.00</p>
+          <button class="order-btn" data-dish-id="72j4-k8-q9p5">
+            Add To Cart
+          </button>
+        </div>
+        <div class="menu-card">
+          <img src="images/spicy karaage.jpg" alt="Spicy Karaage" />
+          <h3>Spicy Karaage</h3>
+          <p>Marinated fried chicken with a spicy kick.</p>
+          <p><strong>Price:</strong> $15.00</p>
+          <button class="order-btn" data-dish-id="g9w0-d4-72j4">
+            Add To Cart
+          </button>
+        </div>
+        <div class="menu-card">
+          <img src="images/Okonomiyaki.jpg" alt="Okonomiyaki" />
+          <h3>Okonomiyaki</h3>
+          <p>Japanese pancake topped with sauces.</p>
+          <p><strong>Price:</strong> $11.00</p>
+          <button class="order-btn" data-dish-id="p572-j4-k8q9">
+            Add To Cart
+          </button>
+        </div>
+      </div>
+    </section>
 
-  <section class="menu-container js-menu-container">
-    <div class="menu-cards">
-      <div class="menu-card">
-        <img src="images/sushi.jpg" alt="Sushi">
-        <h3>Sushi</h3>
-        <p>Vinegared rice with fresh seafood.</p>
-        <p><strong>Price:</strong> $25.00</p>
-        <button class="order-btn" data-dish-id = "p2m5-x1-g9w0">Add To Cart</button>
+    <section class="menu-container">
+      <div class="menu-cards">
+        <div class="menu-card">
+          <img src="images/Udon.jpg" alt="Udon Noodles" />
+          <h3>Udon Noodles</h3>
+          <p>Thick noodles in a light soy broth.</p>
+          <p><strong>Price:</strong> $10.00</p>
+          <button class="order-btn" data-dish-id="k2q9-p4-77j2">
+            Add To Cart
+          </button>
+        </div>
+        <div class="menu-card">
+          <img src="images/Unagi Donburi.jpg" alt="Unagi Donburi" />
+          <h3>Unagi Donburi</h3>
+          <p>Grilled eel over rice with sweet sauce.</p>
+          <p><strong>Price:</strong> $25.00</p>
+          <button class="order-btn" data-dish-id="1w0r-36-2d4h">
+            Add To Cart
+          </button>
+        </div>
+        <div class="menu-card">
+          <img src="images/takoyaki.jpg" alt="Takoyaki" />
+          <h3>Takoyaki</h3>
+          <p>Octopus balls topped with sauce and mayo.</p>
+          <p><strong>Price:</strong> $9.00</p>
+          <button class="order-btn" data-dish-id="472j-4k-8q9p">
+            Add To Cart
+          </button>
+        </div>
+        <div class="menu-card">
+          <img src="images/tempura.jpg" alt="Tempura" />
+          <h3>Tempura</h3>
+          <p>Lightly battered and fried seafood and veggies.</p>
+          <p><strong>Price:</strong> $15.00</p>
+          <button class="order-btn" data-dish-id="k8q9-p5-72j4">
+            Add To Cart
+          </button>
+        </div>
       </div>
-      <div class="menu-card">
-        <img src="images/ramen.jpg" alt="Tonkotsu Ramen">
-        <h3>Tonkotsu Ramen</h3>
-        <p>Creamy pork broth with noodles and toppings.</p>
-        <p><strong>Price:</strong> $10.00</p>
-        <button class="order-btn" data-dish-id="72j4-k8-q9p5">Add To Cart</button>
+    </section>
+
+    <section class="menu-container">
+      <div class="menu-cards">
+        <div class="menu-card">
+          <img src="images/Onigiri.jpg" alt="Onigiri" />
+          <h3>Onigiri</h3>
+          <p>Rice balls with various fillings, wrapped in seaweed.</p>
+          <p><strong>Price:</strong> $3.00</p>
+          <button class="order-btn" data-dish-id="4p0w-4g-8w9w">
+            Add To Cart
+          </button>
+        </div>
+        <div class="menu-card">
+          <img src="images/sukiyaki.jpg" alt="Sukiyaki" />
+          <h3>Sukiyaki</h3>
+          <p>Beef, tofu, and vegetables in a sweet broth.</p>
+          <p><strong>Price:</strong> $18.00</p>
+          <button class="order-btn" data-dish-id="4c0d-1g-3g7a">
+            Add To Cart
+          </button>
+        </div>
+        <div class="menu-card">
+          <img src="images/yakitori.jpg" alt="Yakitori" />
+          <h3>Yakitori</h3>
+          <p>Grilled chicken skewers with a sweet glaze.</p>
+          <p><strong>Price:</strong> $4.00</p>
+          <button class="order-btn" data-dish-id="9w0d-47-2j4k">
+            Add To Cart
+          </button>
+        </div>
+        <div class="menu-card">
+          <img src="images/tonkatsu.jpg" alt="Tonkatsu" />
+          <h3>Tonkatsu</h3>
+          <p>Breaded pork cutlet with tonkatsu sauce with rice.</p>
+          <p><strong>Price:</strong> $14.00</p>
+          <button class="order-btn" data-dish-id="j4k8-q9-p572">
+            Add To Cart
+          </button>
+        </div>
+        <div class="menu-card">
+          <img
+            src="images/Sakura Matcha Dessert.jpg"
+            alt="Sakura Matcha Dessert"
+          />
+          <h3>Sakura Matcha Dessert</h3>
+          <p>Cherry blossom and matcha flavored dessert.</p>
+          <p><strong>Price:</strong> $9.00</p>
+          <button class="order-btn" data-dish-id="p512-j3-k6q9">
+            Add To Cart
+          </button>
+        </div>
       </div>
-      <div class="menu-card">
-        <img src="images/spicy karaage.jpg" alt="Spicy Karaage">
-        <h3>Spicy Karaage</h3>
-        <p>Marinated fried chicken with a spicy kick.</p>
-        <p><strong>Price:</strong> $15.00</p>
-        <button class="order-btn" data-dish-id="g9w0-d4-72j4">Add To Cart</button>
-      </div>
-      <div class="menu-card">
-        <img src="images/Okonomiyaki.jpg" alt="Okonomiyaki">
-        <h3>Okonomiyaki</h3>
-        <p>Japanese pancake topped with sauces.</p>
-        <p><strong>Price:</strong> $11.00</p>
-        <button class="order-btn" data-dish-id="p572-j4-k8q9">Add To Cart</button>
-      </div>
+    </section>
+
+    <div style="display: flex; justify-content: center">
+      <a href="cart.html">
+        <button class="order-btn">Proceed to Check-Out</button>
+      </a>
     </div>
-  </section>
 
-  <section class="menu-container">
-    <div class="menu-cards">
-      <div class="menu-card">
-        <img src="images/Udon.jpg" alt="Udon Noodles">
-        <h3>Udon Noodles</h3>
-        <p>Thick noodles in a light soy broth.</p>
-        <p><strong>Price:</strong> $10.00</p>
-        <button class="order-btn" data-dish-id="k2q9-p4-77j2">Add To Cart</button>
+    <!-- Footer -->
+    <footer class="footer">
+      <h2>Contact Us</h2>
+      <p>Come visit us, or reach out to make a reservation!</p>
+      <div class="contact-info">
+        <p><i class="fa-solid fa-phone"></i> +234 810 444 1372</p>
+        <p>
+          <i class="fa-solid fa-location-dot"></i> 123 Restaurant St, Food City
+        </p>
+        <p><i class="fa-solid fa-envelope"></i> info@restaurant.com</p>
       </div>
-      <div class="menu-card">
-        <img src="images/Unagi Donburi.jpg" alt="Unagi Donburi">
-        <h3>Unagi Donburi</h3>
-        <p>Grilled eel over rice with sweet sauce.</p>
-        <p><strong>Price:</strong> $25.00</p>
-        <button class="order-btn" data-dish-id="1w0r-36-2d4h">Add To Cart</button>
-      </div>
-      <div class="menu-card">
-        <img src="images/takoyaki.jpg" alt="Takoyaki">
-        <h3>Takoyaki</h3>
-        <p>Octopus balls topped with sauce and mayo.</p>
-        <p><strong>Price:</strong> $9.00</p>
-        <button class="order-btn" data-dish-id="472j-4k-8q9p">Add To Cart</button>
-      </div>
-      <div class="menu-card">
-        <img src="images/tempura.jpg" alt="Tempura">
-        <h3>Tempura</h3>
-        <p>Lightly battered and fried seafood and veggies.</p>
-        <p><strong>Price:</strong> $15.00</p>
-        <button class="order-btn" data-dish-id="k8q9-p5-72j4">Add To Cart</button>
-      </div>
-    </div>
-  </section>
+      <p>&copy; 2024 Restaurant Name. All Rights Reserved.</p>
+    </footer>
+    <div class="js-menu-cards" style="display: none"></div>
+    <div class="js-cart" style="display: none"></div>
+    <div class="js-clear-cart" style="display: none"></div>
+    <div class="redirect" style="display: none"></div>
 
-  <section class="menu-container">
-    <div class="menu-cards">
-      <div class="menu-card">
-        <img src="images/Onigiri.jpg" alt="Onigiri">
-        <h3>Onigiri</h3>
-        <p>Rice balls with various fillings, wrapped in seaweed.</p>
-        <p><strong>Price:</strong> $3.00</p>
-        <button class="order-btn" data-dish-id="4p0w-4g-8w9w">Add To Cart</button>
-      </div>
-      <div class="menu-card">
-        <img src="images/sukiyaki.jpg" alt="Sukiyaki">
-        <h3>Sukiyaki</h3>
-        <p>Beef, tofu, and vegetables in a sweet broth.</p>
-        <p><strong>Price:</strong> $18.00</p>
-        <button class="order-btn" data-dish-id="4c0d-1g-3g7a">Add To Cart</button>
-      </div>
-      <div class="menu-card">
-        <img src="images/yakitori.jpg" alt="Yakitori">
-        <h3>Yakitori</h3>
-        <p>Grilled chicken skewers with a sweet glaze.</p>
-        <p><strong>Price:</strong> $4.00</p>
-        <button class="order-btn" data-dish-id="9w0d-47-2j4k">Add To Cart</button>
-      </div>
-      <div class="menu-card">
-        <img src="images/tonkatsu.jpg" alt="Tonkatsu">
-        <h3>Tonkatsu</h3>
-        <p>Breaded pork cutlet with tonkatsu sauce with rice.</p>
-        <p><strong>Price:</strong> $14.00</p>
-        <button class="order-btn" data-dish-id="j4k8-q9-p572">Add To Cart</button>
-      </div>
-      <div class="menu-card">
-        <img src="images/Sakura Matcha Dessert.jpg" alt="Sakura Matcha Dessert">
-        <h3>Sakura Matcha Dessert</h3>
-        <p>Cherry blossom and matcha flavored dessert.</p>
-        <p><strong>Price:</strong> $9.00</p>
-        <button class="order-btn" data-dish-id="p512-j3-k6q9">Add To Cart</button>
-      </div>
-    </div>
-  </section>
+    <div class="js-checkout" style="display: none"></div>
 
-  <div style="display: flex; justify-content: center;">
-    <a href="cart.html">
-      <button class="order-btn">Proceed to Check-Out</button>
-    </a>
-  </div>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <h2>Contact Us</h2>
-    <p>Come visit us, or reach out to make a reservation!</p>
-    <div class="contact-info">
-      <p><i class="fa-solid fa-phone"></i> +234 810 444 1372 </p>
-      <p><i class="fa-solid fa-location-dot"></i> 123 Restaurant St, Food City</p>
-      <p><i class="fa-solid fa-envelope"></i> info@restaurant.com</p>
-    </div>
-    <p>&copy; 2024 Restaurant Name. All Rights Reserved.</p>
-  </footer>
-  <div class="js-menu-cards" style="display: none;"></div>
-  <div class="js-cart" style="display: none;"></div>
-  <div class="js-clear-cart" style="display: none;"></div>
-
-  <div class="js-checkout" style="display: none;"></div>
-
-  <script src="All Scripts/menu.js" type="module">
-  </script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-  const menuSections = document.querySelectorAll(".menu-container");
-  menuSections.forEach((section, index) => {
-    setTimeout(() => {
-      section.classList.add("fade-in");
-    }, index * 100);
-  });
-});
-  </script>
-</body>
+    <script src="All Scripts/menu.js" type="module"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const menuSections = document.querySelectorAll('.menu-container');
+        menuSections.forEach((section, index) => {
+          setTimeout(() => {
+            section.classList.add('fade-in');
+          }, index * 100);
+        });
+      });
+    </script>
+  </body>
 </html>
