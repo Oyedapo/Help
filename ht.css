@@ -202,6 +202,25 @@ a {
   padding: 0 15px 15px;
 }
 
+.quantity-container {
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.quantity-btn {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.quantity {
+  font-size: 16px;
+  font-weight: bold;
+}
+
 .container2{
   font-size: large;
   font-weight: bold;
