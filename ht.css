@@ -112,19 +112,34 @@ a {
 }
 
 .order-btn{
+  margin-bottom: 10px;
   font-weight: bold;
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   border-style: solid;
-  padding: 20px 10px;
+  padding: 10px;
   text-align: center;
-  border-radius: 7px;
+  border-radius: 10px;
 }
+/* @media only screen and(max-width:640){
+    .order-btn{
+      padding: 20px 10px;
+      border-radius: 7px;
+    }
+    .order-btn:hover{
+      translate: 0px;
+    }
+    .menu-card{
+      width: 85%;
+    }
+} */
+
 
 .order-btn:hover{
   background-color: #f8f8f8;
   cursor: pointer;
 }
+
 
 .order-btn:active{
   background-color: rgb(0, 0, 0);
