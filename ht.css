@@ -1,6 +1,6 @@
 /* Reset styles */
 * {
-  margin: 0;
+ 
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
@@ -10,10 +10,9 @@
 body {
   color: #333;
   line-height: 1.6;
-  max-width: 95%;
-  width: 95%;
+  width: 957;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto
 }
 
 a {
@@ -113,14 +112,13 @@ a {
 }
 
 .order-btn{
-  margin-bottom: 10px;
   font-weight: bold;
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   border-style: solid;
-  padding: 10px;
+  padding: 20px 10px;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 7px;
 }
 
 .order-btn:hover{
@@ -139,6 +137,7 @@ a {
   padding: 60px 5vw;
   text-align: center;
   background-color: #f4f4f4;
+  translate: 0px;
 }
 
 .about h2 {
@@ -178,7 +177,7 @@ a {
 }
 
 .menu-card {
-  width: 250px;
+  width: 85%;
   height: fit-content;
   background-color: #f4f4f4;
   border-radius: 15px;
@@ -305,6 +304,11 @@ input {
   gap: 30px;
  
 }
+.about-details {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+}
 
 .about-container h1, h2{
   text-align: center;
@@ -312,13 +316,13 @@ input {
   font-weight: 900;
 }
 
-.comment-container{
+.comment-container {
   display: flex;
-  flex-direction: row;
-  gap: 30px;
-  margin-bottom: 10vh;
-  margin-top: 2vh;
+  max-width: 85%;
+  margin: auto;
+  flex-direction: column;
   border-width: 20px;
+  gap: 16px; 
 }
 
 .comment1, .comment2{
@@ -364,7 +368,18 @@ input {
   height: auto;
   border-radius: 5px;
 }
-
+.connect{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+#comment{
+  padding: 1rem;
+  border-color: black;
+}
+#comment-submit{
+  padding: 1rem;
+}
 
 .cart-container p{
   margin-top: 2vh;
@@ -418,12 +433,10 @@ input {
 
 .checkout{
   background-color: rgb(236, 234, 234);
-  border-radius: 10px;
   border-style: solid;
   height: fit-content;
-  width: 80vh;
-  margin-top: 5vw;
-  margin-bottom: 20px;
+  width: 100vw;
+
 }
 
 .checkout h1 {
@@ -454,7 +467,6 @@ input {
 
 /* Footer */
 .footer {
-  padding: 20px 5vw;
   font-size: 1.2rem;
   font-weight: bold;
   background-color: #333;
