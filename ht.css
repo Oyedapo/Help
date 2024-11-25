@@ -10,10 +10,6 @@
 body {
   color: #333;
   line-height: 1.6;
-  max-width: 95%;
-  width: 95%;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 a {
@@ -24,6 +20,7 @@ a {
 .header {
   box-shadow: 0 5px 4px rgb(70, 71, 71);
   display: flex;
+  position: unset;
   justify-content: space-between;
   align-items: center;
   padding: 20px 5vw;
@@ -123,6 +120,53 @@ a {
   border-radius: 10px;
 }
 
+@media only screen and(max-width:640){
+    .body{
+      width: 957;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .order-btn{
+      padding: 20px 10px;
+      border-radius: 7px;
+    }
+    .order-btn:hover{
+      translate: 0px;
+    }
+    .menu-card{
+      width: 85%;
+    }
+    .comment-container{
+      max-width: 85%;
+      margin: auto;
+      flex-direction: column;
+      gap: 16px;
+    }
+    
+    
+    .checkout{
+      width: 100vw;
+    }
+    .quantity-container {
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    
+    .quantity-btn {
+      background-color: #f8f8f8;
+      border: 1px solid #ccc;
+      padding: 5px 10px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    
+    .quantity {
+      font-size: 16px;
+      font-weight: bold;
+    }
+}
+
 .order-btn:hover{
   background-color: #f8f8f8;
   cursor: pointer;
@@ -132,7 +176,6 @@ a {
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
 }
-
 
 /* About Section */
 .about {
@@ -146,6 +189,26 @@ a {
   margin-bottom: 20px;
 }
 
+.about-details {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+}
+.connect{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+#comment{
+  padding: 1rem;
+  border-color: black;
+  border-radius: 1rem;
+}
+#comment-submit{
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
 .menu-container {
   opacity: 0;
   transform: translateY(20px);
@@ -200,25 +263,6 @@ a {
 
 .menu-card p {
   padding: 0 15px 15px;
-}
-
-.quantity-container {
-  align-items: center;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.quantity-btn {
-  background-color: #f8f8f8;
-  border: 1px solid #ccc;
-  padding: 5px 10px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.quantity {
-  font-size: 16px;
-  font-weight: bold;
 }
 
 .container2{
