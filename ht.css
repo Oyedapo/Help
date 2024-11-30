@@ -9,8 +9,6 @@
 body {
   color: #333;
   line-height: 1.6;
-<<<<<<< HEAD
-=======
   margin-left: auto;
   margin-right: auto
 }
@@ -20,7 +18,6 @@ body {
     width: 95%;
     margin: auto auto;
   }
->>>>>>> e458a17f2d66fecde3f5f4e3bbb3d5e4c53b44b8
 }
 
 a {
