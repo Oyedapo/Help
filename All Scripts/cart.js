@@ -5,7 +5,7 @@ console.log("Send Help");
 //lmao
 export let cart = [];
 
-function saveToStorage() {
+export function saveToStorage() {
   localStorage.setItem('cart-for-ht', JSON.stringify(cart))
 }
 
