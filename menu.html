@@ -15,22 +15,26 @@
     <header class="header">
       <div class="logo"><a href="ht.html">Logo.</a></div>
       <nav class="nav">
-        <ul>
-          <li><a href="ht.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="menu.html"> Menu</a></li>
-          <li><a href="cart.html">Order</a></li>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="ht.html">Home</a></li>
+          <li class="nav-item"><a href="about.html">About</a></li>
+          <li class="nav-item"><a href="menu.html"> Menu</a></li>
+          <li class="nav-item"3ws><a href="cart.html">Order</a></li>
         </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
       </nav>
     </header>
     <h2 style="font-size: 50px;font-weight: bolder;text-align: center;font-family: Verdana, Geneva, Tahoma sans-serif;">
       OUR MENU
     </h2>
-
     <section class="menu-container js-menu-container">
       <div class="menu-cards">
         <div class="menu-card">
-          <img src="images/sushi.jpg" alt="Sushi" />
+          <img src="images/sushi.jpg" alt="Sushi"/>
           <h3>Sushi</h3>
           <p>Vinegared rice with fresh seafood.</p>
           <p><strong>Price:</strong> $25.00</p>
@@ -127,7 +131,9 @@
         </div>
       </div>
     </section>
+    <a href="images/RAMEN RESTAURANT- CALI.jpg" download="logo">logo.png</a>
 
+  
     <section class="menu-container">
       <div class="menu-cards">
         <div class="menu-card">
@@ -395,6 +401,13 @@
           }, index * 100);
         });
       });
+      const hamburger = document.querySelector(".hamburger");
+  const navMenu = document.querySelector(".nav-menu");
+
+  hamburger.addEventListener("click",() => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+  })
     </script>
   </body>
 </html>

@@ -14,12 +14,17 @@
       <a href="ht.html">Logo.</a>
     </div>
     <nav class="nav">
-      <ul>
-        <li><a href="ht.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="menu.html"> Menu</a></li>
-        <li><a href="cart.html">Order</a></li>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="ht.html">Home</a></li>
+        <li class="nav-item"><a href="about.html">About</a></li>
+        <li class="nav-item"><a href="menu.html"> Menu</a></li>
+        <li class="nav-item"3ws><a href="cart.html">Order</a></li>
       </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
     </nav>
   </header>
 
@@ -32,12 +37,15 @@
     </div>
   </section>
 
+ 
+
   <!-- About Section -->
   <section id="about" class="about" >
     <h2>About Us</h2>
     <p>
       Welcome to Ichiraku Ramen, your ultimate destination for authentic Japanese cuisine in the heart of the city. At Ichiraku Ramen, we take pride in bringing the rich flavors and traditions of Japan to your table.
       Our restaurant is known for its unique flavors and dedication to quality. <a href="about.html" style="color: blue;">read more....</a>
+      
     </p>
   </section>
 
@@ -66,7 +74,6 @@
     </div>
   </section>
 
-  
   <section>
     <section class="container2">
       <form action="submit_form.php" method="post" id="form">
@@ -94,11 +101,14 @@
     </form>
     </section>
     
+  
+    
      <div class="js-cart" style="display: none;"></div>
      <div class="js-checkout" style="display: none;"></div>
      <div class="js-clear-cart" style="display: none;"></div>
      <div class="redirect" style="display: none"></div>
      <div class="redirect" style="display: none"></div>
+    
 
   <!-- Footer -->
   <footer class="footer">
@@ -122,6 +132,13 @@
   function confirmReservation() {
     return confirm("Confirm Reservation?");
   }
+  const hamburger = document.querySelector(".hamburger");
+  const navMenu = document.querySelector(".nav-menu");
+
+  hamburger.addEventListener("click",() => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+  })
   </script>
 </body>
 </html>
