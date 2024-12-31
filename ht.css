@@ -100,11 +100,12 @@ a {
     background-color: #262626;
     width: 100%;
     text-align: center;
-    transition: 0.3s;
+    z-index: 9999;
+    transition: left 0.3s ease-in-out;
   }
-  .nav-item{
+  /* .nav-item{
     margin: 16px 0;
-  }
+  } */
 
   .nav-menu.active{
     left: 0;
